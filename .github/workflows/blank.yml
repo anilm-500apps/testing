@@ -3,6 +3,8 @@ on:
   push:
     branches:
       master
+env:
+  MY_NAME: "Mantra"
 jobs:
   my_first_job:
     runs-on: ubuntu-latest
@@ -14,8 +16,6 @@ jobs:
         run: echo "This is $MY_NAME"
   my_second_job:
     runs-on: ubuntu-latest
-    env:
-      MY_NAME: "Mantra"
     steps:
       - name: Checkout code # checking our the code at current commit that triggers the workflow
         uses: actions/checkout@v2

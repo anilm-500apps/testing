@@ -6,7 +6,11 @@ on:
 jobs:
   my_first_job:
     runs-on: ubuntu-latest
-    name: My first job
+    steps:
+      - name: Checkout code # checking our the code at current commit that triggers the workflow
+        uses: actions/checkout@v2
   my_second_job:
     runs-on: ubuntu-latest
-    name: My second job
+    steps:
+      - name: Checkout code # checking our the code at current commit that triggers the workflow
+        uses: actions/checkout@v2

@@ -17,7 +17,7 @@ jobs:
       - name: printing1
         run: echo "This is $MY_NAME"
   my_second_job:
-    if: ${{ github.event_name == "main" }}
+    if: ${{ github.event_name == "main " }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code # checking our the code at current commit that triggers the workflow

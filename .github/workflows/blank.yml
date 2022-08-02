@@ -9,8 +9,12 @@ jobs:
     steps:
       - name: Checkout code # checking our the code at current commit that triggers the workflow
         uses: actions/checkout@v2
+      - name: printing1
+        run: echo "Hello mantra"
   my_second_job:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code # checking our the code at current commit that triggers the workflow
         uses: actions/checkout@v2
+      - name: printing2
+        run: echo "Hello everyone"

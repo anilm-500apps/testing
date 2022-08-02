@@ -11,9 +11,11 @@ jobs:
       - name: Checkout code 
         uses: actions/checkout@v2
       - name: printing1
-        run: echo "Hello mantra"
+        run: echo "This is $MY_NAME"
   my_second_job:
     runs-on: ubuntu-latest
+    env:
+      MY_NAME: "Mantra"
     steps:
       - name: Checkout code # checking our the code at current commit that triggers the workflow
         uses: actions/checkout@v2

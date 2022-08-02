@@ -1,0 +1,10 @@
+name: to test
+on:
+  push:[ master ]
+jobs:
+  job_1:
+  - name: to print
+    run echo "Hello"
+  job_2:
+  - name: to print
+    run echo "every one"

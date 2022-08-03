@@ -1,10 +1,13 @@
 
 
 name: example-workflow
-on: [push]
+on:
+  push:
+    branches:
+      master
 jobs:
   production-deploy:
-    if: github.repository == 'M-Anilkumar/*'
+    if: github.repository == 'M-Anilkumar/testing'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3

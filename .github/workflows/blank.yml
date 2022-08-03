@@ -1,8 +1,5 @@
 name: to test
-on:
-  push:
-    branches:
-      master
+on: [ push ]
 env:
   MY_NAME: "Mantra"
 jobs:

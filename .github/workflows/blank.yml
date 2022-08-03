@@ -7,7 +7,7 @@ env:
   MY_NAME: "Mantra"
 jobs:
   my_first_job:
-    if: github.event_name == "push"
+    if: github.event == "push"
     runs-on: ubuntu-latest
     needs: my_second_job
     steps:

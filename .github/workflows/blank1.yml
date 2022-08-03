@@ -1,0 +1,38 @@
+name: condition-tests
+
+on:
+push:
+branches: [ master ]
+
+jobs:
+test:
+runs-on: ubuntu-latest
+
+steps:
+- name: test1
+  run: echo hoge
+  if: ( 'a' == 'a' )
+
+- name: test2
+  run: echo hoge
+  if: ( 'a' == 'b' )
+
+- name: test3
+  run: echo hoge
+  if: &gt;
+    'a' == 'a'
+
+- name: test4
+  run: echo hoge
+  if: &gt;
+    'a' == 'b'
+
+- name: test5
+  run: echo hoge
+  if: &gt;
+    ${{ 'a' == 'a' }}
+
+- name: test6
+  run: echo hoge
+  if: &gt;
+    ${{ 'a' == 'b' }}

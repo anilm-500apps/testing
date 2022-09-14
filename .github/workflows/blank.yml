@@ -22,6 +22,6 @@ jobs:
       - name: Checkout code # checking our the code at current commit that triggers the workflow
         uses: actions/checkout@v2
       - name: printing2
-        run: echo "Hello everyone"
+        run: echo "Hello everyone "
         
 

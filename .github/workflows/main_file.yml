@@ -16,4 +16,4 @@ jobs:
 
       - name: Scrapping data
         run: |
-          mkdir scrape/xml_files
+          mkdir -p scrape/xml_files

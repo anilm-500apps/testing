@@ -1,6 +1,7 @@
 name: Scrapping for owfis
 
 on: 
+  push:
   workflow_dispatch:
 
 jobs:

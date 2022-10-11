@@ -1,11 +1,8 @@
 name: check broken urls
 on:
-  schedule:
-    - cron: '0 0 1 * *' # run monthly
-  repository_dispatch: # run manually
-    types: [check-link]
-  # push:
-  # ...
+  push:
+    paths:
+      - .github/workflows/blank1.yml
 
 jobs:
   check:

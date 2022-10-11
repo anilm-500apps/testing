@@ -1,0 +1,58 @@
+name: check broken urls
+on:
+  schedule:
+    - cron: '0 0 1 * *' # run monthly
+  repository_dispatch: # run manually
+    types: [check-link]
+  # push:
+  # ...
+
+jobs:
+  check:
+    name: Broken Link Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Broken Link Check
+        uses: technote-space/broken-link-checker-action@v2
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# on:
+#   push:
+#     paths:
+#       - .github/workflows/blank1.yml
+
+# jobs:
+#   my-broken-link-checker:
+#     name: Check broken links
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Check
+#         uses: ruzickap/action-my-broken-link-checker@v2
+#         with:
+#           url: http://localhost:80/
+#           INPUT_PAGES_PATH: ./build/
+#           INPUT_CMD_PARAMS: '--buffer-size=8192 --max-connections=10 --color=always --header="User-Agent:curl/7.54.0" --skip-tls-verification'  # --skip-tls-verification is mandatory parameter when using https and "PAGES_PATH"
+#           cmd_params: "--one-page-only --max-connections=3 --color=always"  # Check just one page

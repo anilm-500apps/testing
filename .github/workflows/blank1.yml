@@ -11,5 +11,5 @@ jobs:
       - name: Check
         uses: ruzickap/action-my-broken-link-checker@v2
         with:
-          url: https://aws.amazon.com/
+          url: https://onepagelove.com/xiv
           cmd_params: "--one-page-only --max-connections=3 --color=always"  # Check just one page

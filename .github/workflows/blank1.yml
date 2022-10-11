@@ -1,8 +1,9 @@
+name: check broken urls
+
 on:
   schedule:
     - cron: '0 0 * * 0'
 
-name: Check markdown links
 jobs:
   my-broken-link-checker:
     name: Check broken links

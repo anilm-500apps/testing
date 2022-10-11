@@ -1,15 +1,15 @@
-
-
-name: example-workflow
 on:
-  push:
-    branches:
-      master
+  schedule:
+    - cron: '0 0 * * 0'
+
+name: Check markdown links
 jobs:
-  production-deploy:
-    if: github.repository == 'M-Anilkumar/testing'
+  my-broken-link-checker:
+    name: Check broken links
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - name: to print
-        run: echo "anil kumar"
+      - name: Check
+        uses: ruzickap/action-my-broken-link-checker@v2
+        with:
+          url: https://www.google.com
+          cmd_params: "--one-page-only --max-connections=3 --color=always"  # Check just one page

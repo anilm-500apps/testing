@@ -1,0 +1,12 @@
+name: creat a file 
+on:
+  push
+jobs:
+  my-broken-link-checker:
+    name: Check broken links
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        run: |
+          touch .textfile.txt
+          echo "sdfjksd" > textfile.txt

@@ -36,6 +36,8 @@ jobs:
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           aws-region: 'ap-south-1'
           SOURCE_DIR: 'public'      # optional: defaults to entire repository
+      - name: Deploy static site to S3 bucket
+        run: aws s3 sync ./* s3://arn:aws:s3:::bucket-to-retrieve-data --delete
 
 
 

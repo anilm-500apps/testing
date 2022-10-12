@@ -1,9 +1,7 @@
 name: check broken urls
 
 on:
-  push:
-    paths:
-      - .github/workflows/blank1.yml
+  push
 
 jobs:
   my-broken-link-checker:

@@ -25,7 +25,7 @@ jobs:
       - name: Create annotation for build error
         id: vars
         run: |
-          linkchecker --check-extern -t 50 https://500apps.com > result_file.txt
+          linkchecker --check-extern -t 50 https://500apps.com/hrsprout > result_file.txt
           cat result_file.txt
       
       - name: Set AWS credentials

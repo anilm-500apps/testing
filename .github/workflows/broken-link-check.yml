@@ -7,8 +7,13 @@ jobs:
   my-broken-link-checker:
     name: Check broken links
     runs-on: ubuntu-latest
+    
     steps:
-      - name: Check
-        uses: ruzickap/action-my-broken-link-checker@v2
+      - name: Link Checker
+        uses: peter-evans/link-checker@v1
+      - name: Create Issue From File
+        uses: peter-evans/create-issue-from-file@v2
         with:
-          url: http://www.aws.com/
+          title: Link Checker Report
+          content-filepath: ./link-checker/out.md
+          labels: report, automated issue

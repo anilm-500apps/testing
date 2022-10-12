@@ -3,7 +3,6 @@ on:
 
 jobs:
   my-broken-link-checker:
-    
     name: Check broken links
     runs-on: ubuntu-latest
     strategy:
@@ -26,6 +25,17 @@ jobs:
         run: |
           linkchecker https://www.gmail.com > result_file.txt
           cat result_file.txt
+      
+      - name: Set AWS credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          AWS_REGION: 'region_name'
+          SOURCE_DIR: 'public'      # optional: defaults to entire repository
+      - name: Deploy to S3
+        run: yarn run deploy
 
 
 
@@ -68,23 +78,3 @@ jobs:
 
 
 
-# name: check broken urls
-
-# on:
-#   push
-
-# jobs:
-#   my-broken-link-checker:
-#     name: Check broken links
-#     runs-on: ubuntu-latest
-    
-#     steps:
-#       - name: Link Checker
-#         id: lc
-#         uses: peter-evans/link-checker@v1
-#       - name: Create Issue From File
-#         uses: peter-evans/create-issue-from-file@v2
-#         with:
-#           title: Link Checker Report
-#           content-filepath: ./link-checker/out.md
-#           labels: report, automated issue

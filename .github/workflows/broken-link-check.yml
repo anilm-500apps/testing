@@ -24,7 +24,7 @@ jobs:
      
       - name: Create annotation for build error
         run: |
-          echo "linkchecker https://aws.amazon.com" 
+          linkchecker https://aws.amazon.com
           # > result_file.txt
           # cat result_file.txt
 

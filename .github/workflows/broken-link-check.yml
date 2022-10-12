@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.7", "3.8", "3.9"]
+        python-version: ["3.9"]
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python ${{ matrix.python-version }}
@@ -36,7 +36,7 @@ jobs:
           aws-region: 'ap-south-1'
           SOURCE_DIR: 'public'      # optional: defaults to entire repository
       - name: Deploy to S3
-        run: yarn run deploy
+        run: aws s3 sync ./public/ s3://BUCKET_NAME --delete
 
 
 

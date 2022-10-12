@@ -23,7 +23,7 @@ jobs:
           pip install git+https://github.com/linkchecker/linkchecker.git
       - uses: "finnp/create-file-action@master"
         env:
-          FILE_NAME: "dir/result_file.txt"
+          FILE_NAME: "result_file.txt"
           FILE_DATA: "file content"
       - name: Create annotation for build error
         run: |

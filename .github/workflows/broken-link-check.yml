@@ -25,8 +25,7 @@ jobs:
         id: vars
         run: |
           linkchecker https://www.gmail.com > result_file.txt
-          echo "{textfile}={value}" >> $GITHUB_ENV
-          echo ::set-output name=result::$(cat result_file.txt)
+          cat result_file.txt
       
       - name: Set AWS credentials
         uses: aws-actions/configure-aws-credentials@v1

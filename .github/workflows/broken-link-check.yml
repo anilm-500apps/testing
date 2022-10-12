@@ -29,15 +29,15 @@ jobs:
           cat result_file.txt
       
       - name: Set AWS credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
+        uses: jakejarvis/s3-sync-action@master 
+        with: 
+          args: --acl public-read --follow-symlinks --delete --exclude '.git/*'
+        env:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           aws-region: 'ap-south-1'
           SOURCE_DIR: 'public'      # optional: defaults to entire repository
-      - name: Deploy static site to S3 bucket
-        run: aws s3 sync ./* arn:aws:s3:::bucket-to-retrieve-data --delete
 
 
 

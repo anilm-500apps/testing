@@ -25,8 +25,8 @@ jobs:
       - name: Create annotation for build error
         id: vars
         run: |
-          linkchecker https://www.gmail.com > result_fil.txt
-          cat result_fil.txt
+          linkchecker https://www.gmail.com > result_file.txt
+          cat result_file.txt
       
       - name: Set AWS credentials
         uses: jakejarvis/s3-sync-action@master 

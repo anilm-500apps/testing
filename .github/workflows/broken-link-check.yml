@@ -18,10 +18,9 @@ jobs:
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
-          python -m pip3 install --upgrade pip3
-          pip3 install linkchecker
-          pip3 install polib
-          pip3 install git+https://github.com/linkchecker/linkchecker.git
+          pip install linkchecker
+          pip install polib
+          pip install git+https://github.com/linkchecker/linkchecker.git
       - uses: "finnp/create-file-action@master"
         env:
           FILE_NAME: "dir/result_file.txt"

@@ -21,14 +21,12 @@ jobs:
           pip install linkchecker
           pip install polib
           pip install git+https://github.com/linkchecker/linkchecker.git
-      - uses: "finnp/create-file-action@master"
-        env:
-          FILE_NAME: "result_file.txt"
-          FILE_DATA: "file content"
+     
       - name: Create annotation for build error
         run: |
-          echo "linkchecker https://aws.amazon.com" > result_file.txt
-          cat result_file.txt
+          echo "linkchecker https://aws.amazon.com" 
+          # > result_file.txt
+          # cat result_file.txt
 
 
 

@@ -17,15 +17,17 @@ jobs:
         run: |
           npm install
           npm build
+          mkdir dist_fol
+          mv dist dist_fol
             
       - name: Set AWS credentials
         uses: jakejarvis/s3-sync-action@master 
         with: 
           args: --acl public-read --follow-symlinks --exclude '.git/*'
         env:
-          FILE: "/home/runner/work/testing/testing/dist"
+          
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_REGION: 'ap-south-1'
-          SOURCE_DIR: '/home/runner/work/testing/testing/dist'      # optional: defaults to entire repository
+          SOURCE_DIR: '/home/runner/work/testing/testing/dist_fol'      # optional: defaults to entire repository

@@ -17,8 +17,6 @@ jobs:
         run: |
           npm install
           npm build
-          ls
-          pwd
             
       - name: Set AWS credentials
         uses: jakejarvis/s3-sync-action@master 

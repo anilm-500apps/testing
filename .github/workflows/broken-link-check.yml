@@ -27,6 +27,8 @@ jobs:
         run: |
           linkchecker --check-extern -t 50 https://infinity.500apps.com > result_file.txt
           cat result_file.txt
+          pwd
+          ls
       
       - name: Set AWS credentials
         uses: jakejarvis/s3-sync-action@master 

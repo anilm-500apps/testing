@@ -1,0 +1,106 @@
+{
+  "name": "sample-npm",
+  "version": "1.1.0-beta.196",
+  "description": "Sample containing NPM application.",
+  "main": "index.js",
+    "scripts": {
+      "serve": "vue-cli-service serve",
+      "build": "vue-cli-service build",
+      "lint": "vue-cli-service lint",
+      "scss-compile": "node-sass -o css scss/main.scss",
+      "pretty": "prettier --write \"./src/**/*.{js,jsx,json,vue}\""
+    },
+    "dependencies": {
+      "@codekraft-studio/vue-record": "^0.0.3",
+      "@fullcalendar/bootstrap": "^5.11.0",
+      "@fullcalendar/daygrid": "^5.11.0",
+      "@fullcalendar/interaction": "^5.11.0",
+      "@fullcalendar/list": "^5.11.0",
+      "@fullcalendar/timegrid": "^5.11.0",
+      "@fullcalendar/vue": "^5.11.0",
+      "@johmun/vue-tags-input": "^2.1.0",
+      "@types/leaflet": "^1.7.11",
+      "bootstrap-vue": "^2.21.2",
+      "chart.js": "^2.9.4",
+      "core-js": "^3.6.5",
+      "downloadjs": "^1.4.7",
+      "gulp-beautify": "^3.0.0",
+      "gulp-nunjucks-render": "^2.2.3",
+      "highcharts": "^8.2.2",
+      "highcharts-vue": "^1.3.5",
+      "js-cookie": "^3.0.1",
+      "jsonexport": "^3.2.0",
+      "jwt-decode": "^3.1.2",
+      "leaflet": "^1.7.1",
+      "moment": "^2.29.2",
+      "moment-timezone": "^0.5.37",
+      "node-sass": "^6.0.1",
+      "number-to-words": "^1.2.4",
+      "osm": "^1.0.0",
+      "scss-compile": "^0.1.7",
+      "ts-ebml": "^2.0.2",
+      "tz-lookup": "^6.1.25",
+      "vue": "^2.6.11",
+      "vue-avatar": "^2.3.3",
+      "vue-chartjs": "^3.5.1",
+      "vue-codemirror": "^4.0.6",
+      "vue-cookies": "^1.7.4",
+      "vue-file-agent": "^1.7.3",
+      "vue-gravatar": "^1.4.1",
+      "vue-multiselect": "^2.1.6",
+      "vue-my-photos": "^3.0.1",
+      "vue-quill-editor": "^3.0.6",
+      "vue-rellax": "^0.2.0",
+      "vue-router": "^3.2.0",
+      "vue-scrollmagic": "^1.2.0",
+      "vue-slider-component": "^3.2.15",
+      "vue-tel-input": "^5.10.1",
+      "vue2-daterange-picker": "^0.6.8",
+      "vue2-leaflet": "^2.7.1",
+      "vuedraggable": "^2.24.3"
+    },
+    "devDependencies": {
+      "@vue/cli-plugin-babel": "~4.5.0",
+      "@vue/cli-plugin-eslint": "~4.5.0",
+      "@vue/cli-plugin-router": "^4.5.15",
+      "@vue/cli-service": "~4.5.0",
+      "autoprefixer": "^10.4.0",
+      "babel-eslint": "^10.1.0",
+      "bootstrap": "^4.0.0-beta",
+      "browser-sync": "^2.27.7",
+      "cssnano": "^5.0.12",
+      "eslint": "^6.7.2",
+      "eslint-plugin-vue": "^6.2.2",
+      "gulp": "^4.0.2",
+      "gulp-concat": "^2.6.1",
+      "gulp-postcss": "^9.0.1",
+      "gulp-sass": "^5.0.0",
+      "jquery": "^3.6.0",
+      "popper.js": "^1.16.1",
+      "postcss": "^8.4.4",
+      "sass": "^1.49.7",
+      "sass-loader": "^10",
+      "vue-template-compiler": "^2.6.11",
+      "webpack": "^4.46.0"
+    },
+    "eslintConfig": {
+      "root": true,
+      "env": {
+        "node": true
+      },
+      "extends": [
+        "plugin:vue/essential",
+        "eslint:recommended"
+      ],
+      "parserOptions": {
+        "parser": "babel-eslint"
+      },
+      "rules": {}
+    },
+    "browserslist": [
+      "> 1%",
+      "last 2 versions",
+      "not dead"
+    ]
+  }
+  

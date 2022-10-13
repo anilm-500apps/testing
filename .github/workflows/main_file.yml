@@ -17,7 +17,8 @@ jobs:
         run: |
           npm install
           mkdir dist
-          npm build > dist
+          npm run build > dist 
+          ls
           mkdir dist_fol
           mv dist dist_fol
             

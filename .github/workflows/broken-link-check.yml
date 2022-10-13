@@ -27,8 +27,8 @@ jobs:
         run: |
           linkchecker --check-extern -t 50 https://infinity.500apps.com > result_file.txt
           cat result_file.txt
-          pwd
-          ls
+          mkdir dist_fol
+          mv result_file.txt dist_fol
       
       - name: Set AWS credentials
         uses: jakejarvis/s3-sync-action@master 
@@ -40,7 +40,7 @@ jobs:
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           AWS_S3_BUCKET: ${{ secrets.AWS_S3_BUCKET }}
           AWS_REGION: 'ap-south-1'
-          SOURCE_DIR: '/home/runner/work/testing/testing/result_file.txt'      # optional: defaults to entire repository
+          SOURCE_DIR: '/home/runner/work/testing/testing/dist_fol'      # optional: defaults to entire repository
 
 
 

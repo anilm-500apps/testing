@@ -16,7 +16,8 @@ jobs:
       - name: installing packages
         run: |
           npm install
-          npm build
+          mkdir dist
+          npm build > dist
           mkdir dist_fol
           mv dist dist_fol
             

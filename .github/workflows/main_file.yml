@@ -17,9 +17,8 @@ jobs:
         run: |
           npm install
           npm run build 
-          ls
           mkdir dist_fol
-          # mv dist dist_fol
+          mv dist dist_fol
             
       - name: Set AWS credentials
         uses: jakejarvis/s3-sync-action@master 

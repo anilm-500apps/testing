@@ -60,6 +60,9 @@ while condition:
 
 
 time.sleep(20)
+if os.path.
+if not os.path.exists("/root/infinity-seo/test-dummy.json"):
+    open("/root/infinity-seo/test-dummy.json", "x")
 old_file = open("/root/infinity-seo/test.json" , "r")
 old_data=json.load(old_file)
 with open("/root/infinity-seo/test-dummy.json","w") as new_file:
